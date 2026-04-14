@@ -100,10 +100,12 @@ export default function BoardSelector({ boards, userId, onSelect, onRefresh, onL
   return (
     <div style={styles.container}>
       <div style={styles.inner}>
-        {/* Back to Hub */}
-        <a href="/kanban-hub/" style={styles.hubLink}>
-          <span style={{ fontSize: 14 }}>&larr;</span> Centurion Workspaces
-        </a>
+        {/* Breadcrumb */}
+        <div style={{ marginBottom: 20 }}>
+          <a href="https://ceolifer1.github.io/kanban-hub/" style={{ color: "var(--text-dim)", fontSize: 13, textDecoration: "none", fontWeight: 500 }}>
+            ← Back to Workspaces
+          </a>
+        </div>
 
         {/* Header */}
         <div style={styles.header}>
@@ -385,17 +387,6 @@ function SettingsDropdown({ board, onEdit, onDelete, onClose }) {
 }
 
 const styles = {
-  hubLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: 6,
-    fontSize: 13,
-    color: "var(--text-dim)",
-    textDecoration: "none",
-    marginBottom: 20,
-    fontFamily: "'DM Sans', sans-serif",
-    transition: "color 0.15s",
-  },
   container: { minHeight: "100vh", background: "var(--bg)", padding: "40px 24px" },
   inner: { maxWidth: 900, margin: "0 auto" },
   header: {
